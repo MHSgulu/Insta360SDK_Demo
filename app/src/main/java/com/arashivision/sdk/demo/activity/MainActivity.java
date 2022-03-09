@@ -88,7 +88,11 @@ public class MainActivity extends BaseObserveCameraActivity {
         });
 
         findViewById(R.id.bt_video).setOnClickListener(v -> {
-            startActivity(new Intent(MainActivity.this, FwUpgradeActivity.class));
+            PlayVideoActivity.launchActivity(this, new String[]{
+                    StitchActivity.COPY_DIR + "/img1.jpg",
+                    StitchActivity.COPY_DIR + "/img2.jpg",
+                    StitchActivity.COPY_DIR + "/img3.jpg"
+            });
         });
 
 
